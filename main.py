@@ -1,4 +1,4 @@
-# Robot Competition Game functions - must be included with main.py for the program to run
+# Robot Competition Game 
 from important_one import *
 
 # Run the intro sequence and get the player's robot name

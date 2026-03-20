@@ -61,8 +61,8 @@ competitor_names = [
     "CheezoTron",
     "Dough Master 3000",
     "Pepperoni Prime",
-    "CrustCrusher-77",
-    "OvenLord Sigma",
+    "CrustCrusher-67",
+    "OvenLord",
     "CheddarCore-V2",
     "Marinara Monk",
     "ToppingTitan-RX",
@@ -158,7 +158,7 @@ def pizza_score(entity):
 def duel_score(entity):
     return pizza_score(entity) + entity["quality"] * 3
 
-# ---------- LOSING STREAK PENALTY (DOUBLING) ----------
+# ----------> LOSING STREAK PENALTY (DOUBLING) don't lose I guess :( <----------
 
 def losing_penalty(entity):
     # 15 * (2^losing_streak)
@@ -199,7 +199,7 @@ def sudden_death_duel_entities(a, b):
 
         # Tie → repeat
 
-# ---------- SURVIVAL SYSTEM ----------
+# ----------> SURVIVAL SYSTEM <----------
 
 def duel_win_rate(entity):
     total = entity["duel_wins"] + entity["duel_losses"]
@@ -238,11 +238,11 @@ def compute_survival_percentages(include_player=True):
     return {e["name"]: (s / total) * 100 for e, s in zip(all_entities, scores)}
 
 
-# ==========================
+# <==========================>
 # PART 2 — GAMEPLAY SYSTEMS
-# ==========================
+# <==========================>
 
-# ---------- GROCERY STORE SYSTEM ----------
+# ----------> GROCERY STORE SYSTEM <----------
 
 def grocery_store(entity):
     print("\n=== GROCERY STORE ===")
@@ -344,7 +344,7 @@ def buy_side_items(entity):
             print("Invalid choice.")
 
 
-# ---------- CASINO SYSTEM ----------
+# ----------> CASINO SYSTEM 
 
 def casino(entity):
     print("\n=== CASINO ===")
@@ -414,7 +414,7 @@ def slot_machine(entity):
         print("You lost the bet.")
 
 
-# ---------- COMPETITOR DAILY ACTIONS ----------
+# ----------> COMPETITOR DAILY ACTIONS 
 
 def competitor_daily_actions():
     for c in competitors:
